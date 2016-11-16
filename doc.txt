@@ -9,3 +9,11 @@ http://jsbin.com/miwaloyiro/edit?html,css,output
 
 dimensionnement :
 http://jsbin.com/tahuseroqe/edit?html,css,output
+
+compatiblité :
+http://caniuse.com
+https://html5test.com
+
+flex:
+http://jsbin.com/qiluhuleri/edit?html,css,output
+

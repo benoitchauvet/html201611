@@ -1,3 +1,11 @@
 Choix des balises sémantiques :
 http://html5doctor.com/downloads/h5d-sectioning-flowchart.png
 
+positionnement css :
+http://jsbin.com/hudexedeni/edit?html,css,output
+
+float left :
+http://jsbin.com/miwaloyiro/edit?html,css,output
+
+dimensionnement :
+http://jsbin.com/tahuseroqe/edit?html,css,output

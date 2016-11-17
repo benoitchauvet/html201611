@@ -1,9 +1,72 @@
-h1
+﻿body
 {
-	color:green;text-decoration:underline;
+    font-family:'Comic Sans MS';
 }
 
-h2
+header, nav, article, section, footer, aside
 {
-	font-family:arial;
+    border-radius:5px;
+}
+
+header, nav, section, footer {
+    background-color:#FFA1D0;
+    margin:5px;
+    padding:5px;
+}
+
+header{
+    display:flex;
+    align-items:center;
+}
+
+header img
+{
+    width:150px;
+}
+
+header h1
+{
+    text-align:center;
+    flex-grow:1;
+}
+
+nav ul{
+    font-family:'8Pin Matrix';
+    display:flex;
+    flex-direction:row;
+    padding:0;
+}
+
+nav ul li
+{
+    margin:10px;
+    background-color:ActiveCaption;
+    list-style-type : none;
+}
+
+.wrapper
+{
+    display:flex;
+}
+
+#colonneGauche
+{
+    flex-grow:1;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+article
+{
+    padding:5px;
+    margin:5px 0px;
+    flex-basis:15em;
+    background-color:#7F6070;
+}
+
+#colonneDroite
+{
+    flex-basis:15em;
 }

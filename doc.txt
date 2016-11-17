@@ -13,6 +13,7 @@ http://jsbin.com/tahuseroqe/edit?html,css,output
 compatiblité :
 http://caniuse.com
 https://html5test.com
+http://kangax.github.io/compat-table/es6/
 
 flex:
 http://jsbin.com/qiluhuleri/edit?html,css,output

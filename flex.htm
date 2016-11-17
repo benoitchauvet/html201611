@@ -2,14 +2,17 @@
 <html>
 <head>
 <style>
+
 *{
   box-sizing: border-box; /* pour maîtriser width et flex-basis */
 }
 
+/* correction bug IE de min-height non appliqué à body
 html {
   display: flex; 
-  flex-direction: column; /* correction bug IE de min-height non appliqué à body */
+  flex-direction: column; 
 }
+ */
 
 body {
   display: flex; /* crée un contexte flex pour ses enfants */
@@ -18,11 +21,10 @@ body {
   padding: 1em;
   font-size:larger;
 }
+
 .wrapper {
   flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto; /* occupe la hauteur restante */
-
+ 
   display: flex; /* crée un contexte flex pour ses enfants */
   flex-direction:row;  
 }
@@ -31,6 +33,7 @@ nav,
 aside {
   flex-basis: 10em;
 }
+
 article {
   flex-grow: 1; /* occupe la largeur restante */
 }
@@ -76,7 +79,7 @@ article,
 footer {
   margin: .4em;
   padding: 1em;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 header {
   background: #ffeebb;

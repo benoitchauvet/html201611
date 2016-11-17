@@ -96,7 +96,7 @@
                 <h2>Tout va bien</h2>
                 <img src="images/licorne.bmp" />
                 <p>
-                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    djlkq qsd <span>djf sdj kjh </span>kqsld kqsd ljkd ljq sdlqs
                     jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
                     dqsd qs dj djq sjdoqijf kosq f
                 </p>
@@ -130,5 +130,16 @@
             </li>
         </ul>
     </footer>
+    
+    <script src="js/utils.js"></script>
+    <script>
+
+        let section = document.querySelector("#colonneGauche");
+
+        creerArticle(section, "JS Rocks", "Et c'est vraiment chouette d'ecrire n'importe quoi...");
+
+        creerArticle(section, "CSS aussi", "Et c'est vraiment chouette d'ecrire n'importe quoi...", "images/dragon.jpg");
+
+    </script>
 </body>
 </html>

@@ -1,6 +1,11 @@
-﻿body
+﻿.rouge{
+    border:3px red dashed;
+
+}
+
+body
 {
-    font-family:'Comic Sans MS';
+    font-family:Arial;
 }
 
 header, nav, article, section, footer, aside
@@ -9,7 +14,7 @@ header, nav, article, section, footer, aside
 }
 
 header, nav, section, footer {
-    background-color:#FFA1D0;
+    background-color:ActiveCaption;
     margin:5px;
     padding:5px;
 }
@@ -40,7 +45,7 @@ nav ul{
 nav ul li
 {
     margin:10px;
-    background-color:ActiveCaption;
+    background-color:#c6e0fb;
     list-style-type : none;
 }
 
@@ -63,7 +68,7 @@ article
     padding:5px;
     margin:5px 0px;
     flex-basis:15em;
-    background-color:#7F6070;
+    background-color:#c6e0fb;
 }
 
 #colonneDroite

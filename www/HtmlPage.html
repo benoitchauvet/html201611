@@ -103,6 +103,18 @@
             </article>
         </section>
         <section id="colonneDroite">
+            <form>
+                <label for="titre">Titre : </label>
+                <input type="text" id="titre" name="titre" placeholder="tapez le titre" />
+                <br />
+                <label for="teaser">Teaser : </label>
+                <input type="text" id="teaser" name="teaser" placeholder="tapez le teaser" />
+                <br />
+                <input type="checkbox" name="optin" />
+                <label for="optin">J'accepte</label>
+                <br/>
+                <input type="button" id="btnCreer" value="Créer"/>
+            </form>
             <aside>
                 <h2>Pub</h2>
                 <p>De la pub...</p>
@@ -136,9 +148,31 @@
 
         let section = document.querySelector("#colonneGauche");
 
-        creerArticle(section, "JS Rocks", "Et c'est vraiment chouette d'ecrire n'importe quoi...");
+        let btnCreer = document.getElementById("btnCreer");
 
-        creerArticle(section, "CSS aussi", "Et c'est vraiment chouette d'ecrire n'importe quoi...", "images/dragon.jpg");
+        /*
+        btnCreer.onclick = function () {
+            console.log("bouton cliqué");
+        };
+        */
+
+        btnCreer.addEventListener("click", function (event) {
+
+            console.log(event);
+
+            let optin = document.querySelector("[name='optin']");
+
+            if (optin.checked)
+            {
+                let titre = document.getElementById("titre");
+                let teaser = document.querySelector("[name='teaser']");
+
+                creerArticle(section, titre.value, teaser.value);
+            }
+        });
+
+       // creerArticle(section, "JS Rocks", "Et c'est vraiment chouette d'ecrire n'importe quoi...");
+       //creerArticle(section, "CSS aussi", "Et c'est vraiment chouette d'ecrire n'importe quoi...", "images/dragon.jpg");
 
     </script>
 </body>

@@ -1,4 +1,16 @@
-﻿function creerArticle(conteneur, titre, teaser, imageUrl = 'images/licorne.bmp')
+﻿function getRandomColor()
+{
+    let r = Math.round(Math.random()* 255);
+    let g = Math.round(Math.random()* 255);
+    let b = Math.round(Math.random()* 255);
+    
+    //let coul = 'rgb(${r},${g},${b})';
+    
+    return "rgb(" + r + "," + g + ", " + b + ")";
+}
+
+
+function creerArticle(conteneur, titre, teaser, imageUrl = 'images/licorne.bmp')
 {
     let article = document.createElement("article");
 

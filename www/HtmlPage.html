@@ -149,6 +149,12 @@
         let section = document.querySelector("#colonneGauche");
 
         let btnCreer = document.getElementById("btnCreer");
+        let titre = document.getElementById("titre");
+
+        titre.addEventListener("keypress", function (event) {
+            console.log(event.key);
+            titre.style.backgroundColor = getRandomColor();
+        });
 
         /*
         btnCreer.onclick = function () {
@@ -164,7 +170,7 @@
 
             if (optin.checked)
             {
-                let titre = document.getElementById("titre");
+                
                 let teaser = document.querySelector("[name='teaser']");
 
                 creerArticle(section, titre.value, teaser.value);

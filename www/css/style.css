@@ -117,3 +117,23 @@ article
 {
     flex-basis:17em;
 }
+
+@media screen and (max-width: 480px)
+{
+    #colonneDroite
+    {
+        display:none;
+    }
+}
+
+@media print
+{
+    article{
+        border:1px solid black;
+    }
+
+    img, nav, #colonneDroite
+    {
+        display:none;
+    }
+}

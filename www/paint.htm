@@ -59,18 +59,18 @@
         <canvas id="canvas" width="600" height="400"></canvas>
 		
 		<ul id="couleurs">
-			<li><a href="#" data-couleur="#000000" class="actif">Noir</a></li>
-			<li><a href="#" data-couleur="#ffffff">Blanc</a></li>
-			<li><a href="#" data-couleur="#ff0000">Rouge</a></li>
-			<li><a  href="#" data-couleur="brown">Marron</a></li>
-			<li><a  href="#" data-couleur="orange">Orange</a></li>
-			<li><a  href="#" data-couleur="yellow">Jaune</a></li>
-			<li><a  href="#" data-couleur="green">Vert</a></li>
-			<li><a  href="#" data-couleur="cyan">Cyan</a></li>
-			<li><a  href="#" data-couleur="blue">Bleu</a></li>
-			<li><a  href="#" data-couleur="indigo">Indigo</a></li>
-			<li><a  href="#" data-couleur="Violet">Violet</a></li>
-			<li><a  href="#" data-couleur="hotpink">Rose</a></li>
+			<li><a href="#" data-couleur="#000000" class="actif"></a></li>
+			<li><a href="#" data-couleur="#ffffff"></a></li>
+			<li><a href="#" data-couleur="#ff0000"></a></li>
+			<li><a href="#" data-couleur="brown"></a></li>
+			<li><a href="#" data-couleur="orange"></a></li>
+			<li><a href="#" data-couleur="yellow"></a></li>
+			<li><a href="#" data-couleur="green"></a></li>
+			<li><a href="#" data-couleur="cyan"></a></li>
+			<li><a href="#" data-couleur="blue"></a></li>
+			<li><a href="#" data-couleur="indigo"></a></li>
+			<li><a href="#" data-couleur="Violet"></a></li>
+			<li><a href="#" data-couleur="hotpink"></a></li>
 		</ul>
 		
 		<form id="largeurs_pinceau">
@@ -134,8 +134,8 @@
 			document.onmouseup = function(e) {
 				if (e.button == 0)
 				{
-				painting = false;
-				started = false;
+					painting = false;
+					started = false;
 				}
 			};
 			
@@ -165,12 +165,27 @@
 			};
 			
 			
-			
 			// Clear du Canvas :
 			function clear_canvas() {
 			context.fillStyle = "#FFF";
 			context.fillRect(0,0,canvas.width,canvas.height);
 			}
+			
+			/*
+			for (var lien of document.querySelectorAll("#couleurs a"))
+			{
+				lien.style.background = lien.getAttribute("data-couleur");
+				lien.onclick = function()
+				{
+					color = lien.getAttribute("data-couleur");
+					for (var lien2 of document.querySelectorAll("#couleurs a"))
+					{
+						lien2.classList.remove("actif");
+						lien.classList.add("actif");
+					}
+				}
+			}
+			*/
 			
 			// Pour chaque carré de couleur :
 			$("#couleurs a").each(function() {
@@ -189,6 +204,7 @@
 					return false;
 				});
 			});
+			
 			
 			// Largeur du pinceau :
 			$("#largeur_pinceau").change(function() {

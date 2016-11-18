@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" />
+        <h1 class="test">Licornes et arcs en ciel</h1>
+    </header>
+
+    <nav class="test">
+        <ul>
+            <li><a class="lienMenu" href="#">Licornes</a></li>
+            <li><a class="lienMenu" href="#">Arcs en ciel</a></li>
+            <li><a class="lienMenu" href="#">Condiments pour licornes</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <section id="colonneGauche">
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+            <article>
+                <h2>Tout va bien</h2>
+                <img src="images/licorne.bmp" />
+                <p>
+                    djlkq qsd <span>djf sdj kjh </span>kqsld kqsd ljkd ljq sdlqs
+                    jdl qlsjdlqjsdl jlsqdkjsq kslqdj qsd
+                    dqsd qs dj djq sjdoqijf kosq f
+                </p>
+            </article>
+        </section>
+        <section id="colonneDroite">
+            <form>
+                <label for="titre">Titre : </label>
+                <input type="text" id="titre" name="titre" placeholder="tapez le titre" />
+                <br />
+                <label for="teaser">Teaser : </label>
+                <input type="text" id="teaser" name="teaser" placeholder="tapez le teaser" />
+                <br />
+                <input type="checkbox" name="optin" />
+                <label for="optin">J'accepte</label>
+                <br/>
+                <input type="button" id="btnCreer" value="Créer"/>
+            </form>
+            <aside>
+                <h2>Pub</h2>
+                <p>De la pub...</p>
+            </aside>
+            <aside>
+                <h2>Pub</h2>
+                <p>De la pub...</p>
+            </aside>
+            <aside>
+                <h2>Pub</h2>
+                <p>De la pub...</p>
+            </aside>
+        </section>
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <a href="#">contact</a>
+            </li>
+            <li>
+                <a href="#">conditions générales</a>
+            </li>
+            <li>
+                <a href="#">recrutement</a>
+            </li>
+        </ul>
+    </footer>
+    
+    <script src="js/utils.js"></script>
+    <script>
+
+        let section = document.querySelector("#colonneGauche");
+
+        let btnCreer = document.getElementById("btnCreer");
+        let titre = document.getElementById("titre");
+
+        titre.addEventListener("keypress", function (event) {
+            console.log(event.key);
+            titre.style.backgroundColor = getRandomColor();
+        });
+
+        /*
+        btnCreer.onclick = function () {
+            console.log("bouton cliqué");
+        };
+        */
+
+        btnCreer.addEventListener("click", function (event) {
+
+            console.log(event);
+
+            let optin = document.querySelector("[name='optin']");
+
+            if (optin.checked)
+            {
+                
+                let teaser = document.querySelector("[name='teaser']");
+
+                creerArticle(section, titre.value, teaser.value);
+            }
+        });
+
+       // creerArticle(section, "JS Rocks", "Et c'est vraiment chouette d'ecrire n'importe quoi...");
+       //creerArticle(section, "CSS aussi", "Et c'est vraiment chouette d'ecrire n'importe quoi...", "images/dragon.jpg");
+
+    </script>
+</body>
+</html>

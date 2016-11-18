@@ -20,13 +20,41 @@ header, nav, section, footer {
 }
 
 header{
+    _transform: rotate(45deg) scale(0.5);
     display:flex;
     align-items:center;
+    position:relative;
 }
 
 header img
 {
     width:150px;
+    position:relative;
+    animation:monAnime 3s linear 4 alternate ;
+}
+
+@keyframes monAnime
+{
+    0%
+    {
+        left:0px;
+    }
+    25%
+    {
+        left:250px;
+    }
+    50%
+    {
+        left:0px;
+    }
+    75%
+    {
+        left:250px;
+    }
+    100%
+    {
+        left:650px;
+    }
 }
 
 header h1
@@ -54,8 +82,22 @@ nav ul li
     display:flex;
 }
 
+article
+{
+    transition : all 2s;
+}
+
+article:hover
+{
+    background:hotpink;
+    -transform:scale(5) rotateZ(1080deg);
+    -transform:rotateX(25deg) rotateY(25deg) translateZ(-500px);
+}
+
 #colonneGauche
 {
+    perspective:1000px;
+
     flex-grow:1;
 
     display:flex;

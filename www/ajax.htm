@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo AJAX</title>
+</head>
+<body>
+
+    <select id="cbxRegions">
+        <option value="0">Choisissez une région...</option>
+    </select>
+
+    <img src="images/wait.gif" id="wait" style="visibility:hidden;"/>
+
+    <select id="cbxDepartements">
+    </select>
+
+<script>
+
+    var listeRegions = document.getElementById("cbxRegions");
+    var listeDepartements = document.getElementById("cbxDepartements");
+
+    // remplir la liste des regions :
+    var xhr1 = new XMLHttpRequest();
+    xhr1.open("get", "regions.php", true);
+
+    xhr1.onreadystatechange = function () {
+        if (xhr1.readyState == 4)
+        {
+            let str = xhr1.responseText;
+            let obj = JSON.parse(str);
+
+            for (var region of obj.regions)
+            {
+                var opt = document.createElement("option");
+                opt.setAttribute("value", region.id);
+                opt.innerHTML = region.nom;
+
+                listeRegions.appendChild(opt);
+            }
+        }
+    };
+
+    xhr1.send();
+
+    listeRegions.onchange = function(){
+
+        var xhr2 = new XMLHttpRequest();
+        xhr2.open("get", "departements.php?region=" + listeRegions.value, true);
+
+        xhr2.onreadystatechange = function(){
+            if (xhr2.readyState == 4)
+            {
+                let str = xhr2.responseText;
+                let obj = JSON.parse(str);
+                
+                listeDepartements.innerHTML = "";
+
+                for (var dept of obj.departements)
+                {
+                    var opt = document.createElement("option");
+                    opt.setAttribute("value", dept.id);
+                    opt.innerHTML = dept.nom;
+
+                    listeDepartements.appendChild(opt);
+                }
+                document.getElementById("wait").style.visibility = "hidden";
+            }
+        };
+
+        document.getElementById("wait").style.visibility = "visible";
+        
+        xhr2.send()
+    }
+
+
+</script>
+</body>
+</html>
